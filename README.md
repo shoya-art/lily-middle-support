@@ -1,31 +1,31 @@
-# Re Relation 会員サイト
+# Re Relation 個別サポート会員サイト
 
-現在運用しているRe Relation会員サイトのフロントを基準にした会員サイトです。
+既存Re Relation会員サイトの配色・余白・カード表現をデザイン基準として、新しく設計した個別サポート用会員サイトです。
 
-## 画面
+既存サイトの複製ではなく、以下の機能に絞っています。
 
-- `index.html`: Re Relationログイン
-- `dashboard.html`: 会員ホーム
+- 購入者専用ログイン
+- 個人別ホームと受講進捗
+- 動画講義
+- ワーク回答と保存
+- 運営者用の進捗・困りごと確認画面
+
+## ファイル
+
+- `index.html`: ログイン
+- `dashboard.html`: 購入者専用ホーム
 - `lectures.html`: 動画講義・ワーク
-- `my_works.html`: 提出したワーク
-- `checkin.html`: チェックイン
-- `daily_report.html`: 幸せ日記
-- `diary.html`: 心の自由帳
-- `monthly_report.html`: 月次レポート
-- `admin.html`: 管理画面
-- `onboarding.html`: 初回登録
-- `brand-hero.png`: ログイン画面背景
+- `admin.html`: 運営管理画面
+- `styles.css`: 共通デザイン
+- `app.js`: 見本データと画面動作
+- `brand-hero.png`: ログイン背景
 
 ## ローカル確認
 
-静的HTMLサイトなので、ローカルサーバーで確認できます。
-
 ```bash
-python3 -m http.server 3000
+python3 -m http.server 3010
 ```
 
-その後、`http://localhost:3000/` を開きます。
+`http://localhost:3010/` を開きます。
 
-## データ
-
-認証とデータ保存にはSupabaseを使用しています。本サイトを別商品向けに本稼働させる前に、既存環境と分離したSupabase設定へ切り替えます。
+現在はデザイン・操作確認用の見本データ版です。実運用時は既存環境と分離したSupabaseへ接続します。
