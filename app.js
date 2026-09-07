@@ -30,6 +30,9 @@ const sessions=[{
   workNote:'質問1で作ったリストは、スマホのメモに保存しておいて、彼にLINEを送る前にいつでも見返せるようにしておいてください。今日から完璧にできなくても大丈夫です。まずは、送る前に一度立ち止まって、このリストを見る習慣をつけることがゴールです。'
 },{
   number:3,
+  videoTitle:'一度返事をもらった後、何度も確認・謝罪してしまうことについて',
+  videoUrl:'https://youtu.be/ZWlNK6RwUSY',
+  videoEmbedUrl:'https://www.youtube.com/embed/ZWlNK6RwUSY',
   workTitle:'確認・謝罪のやり取りを振り返る',
   workDescription:['一度返事をもらった後、もう一度確認してしまった場面を振り返る','予定変更をまとめて伝える練習をする','次に同じ場面が来た時の対応を、あらかじめ決めておく'],
   workQuestions:[
