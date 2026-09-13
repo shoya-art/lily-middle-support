@@ -70,7 +70,7 @@ function getAnswers(id,memberId=currentMember()?.id){
 function hasAnswers(id,memberId=currentMember()?.id){return Object.values(getAnswers(id,memberId)).some(value=>typeof value==='string' && value.trim())}
 function buildLessons(memberId){
   return (courseByMember[memberId] || []).flatMap(session=>[
-    ...(session.videoUrl?[{id:`${session.number}-video`,round:`第${session.number}回`,title:session.videoTitle,type:'video',url:session.videoUrl}]:[]),
+    ...(session.videoUrl?[{id:`${session.number}-video`,round:`第${session.number}回`,title:session.videoTitle,type:'video',url:session.videoUrl,embedUrl:session.videoEmbedUrl}]:[]),
     {id:`${session.number}-work`,round:`第${session.number}回`,title:session.workTitle,type:'work',questions:session.workQuestions,description:session.workDescription,note:session.workNote,previouslyCompleted:!!session.previouslyCompleted}
   ]);
 }
@@ -113,7 +113,8 @@ function openLesson(id){
   document.querySelector('#modal-title').textContent=lesson.title;
   const content=document.querySelector('#modal-content');
   if(lesson.type==='video'){
-    content.innerHTML=`<div class="video-box"><iframe src="${lesson.url.replace('https://youtu.be/','https://www.youtube.com/embed/')}" title="${escapeHtml(lesson.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><a class="video-link" href="${lesson.url}" target="_blank" rel="noopener">YouTubeで開く</a><button class="wide-btn" onclick="completeVideo('${id}')">視聴を完了する</button>`;
+    const driveVideo=lesson.url.startsWith('https://drive.google.com/');
+    content.innerHTML=`<div class="video-box"><iframe src="${lesson.embedUrl || lesson.url.replace('https://youtu.be/','https://www.youtube.com/embed/')}" title="${escapeHtml(lesson.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><a class="video-link" href="${lesson.url}" target="_blank" rel="noopener">${driveVideo?'Google Drive':'YouTube'}で開く</a>${driveVideo?'<p class="work-intro">表示できない場合はGoogle Driveで開いてください。動画の閲覧は元の共有設定に従います。</p>':''}<button class="wide-btn" onclick="completeVideo('${id}')">視聴を完了する</button>`;
   }else{
     const saved=getAnswers(id);
     const field=(key,label,placeholder='ここに回答を入力してください')=>`<label>${escapeHtml(label)}</label><textarea data-question="${key}" placeholder="${escapeHtml(placeholder)}">${escapeHtml(saved[key] || '')}</textarea>`;
@@ -161,7 +162,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第30回のワーク（過去に取り組み済み）':'第1回〜第3回の動画講義・ワーク';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第30回のワークと28本の動画講義（第11・12回はワークのみ）':'第1回〜第3回の動画講義・ワーク';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;

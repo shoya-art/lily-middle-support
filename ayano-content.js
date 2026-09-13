@@ -49,7 +49,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第1回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1wjVgDKMuUmX0sTNptIytEPmt3JPWvq4K/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1wjVgDKMuUmX0sTNptIytEPmt3JPWvq4K/preview"
   },
   {
     "number": 2,
@@ -100,7 +103,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第2回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1dOSU7c2J2qdxW0eMZPJf9ieM7fPZq3P8/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1dOSU7c2J2qdxW0eMZPJf9ieM7fPZq3P8/preview"
   },
   {
     "number": 3,
@@ -151,7 +157,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第3回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1UJjjzut6FK2_mnw4Y0Tw8xLwp96a-rqu/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1UJjjzut6FK2_mnw4Y0Tw8xLwp96a-rqu/preview"
   },
   {
     "number": 4,
@@ -202,7 +211,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第4回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/108_2GGQwq7I8RNM26Ft56e2QDRpGkfpL/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/108_2GGQwq7I8RNM26Ft56e2QDRpGkfpL/preview"
   },
   {
     "number": 5,
@@ -253,7 +265,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第5回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1ddEtOuvWqhIhMYI0G2VrZcf5JBkjRT-S/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1ddEtOuvWqhIhMYI0G2VrZcf5JBkjRT-S/preview"
   },
   {
     "number": 6,
@@ -304,7 +319,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第6回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/16orgWxcv_cjWHHlre5FSrpkp0LUBzacC/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/16orgWxcv_cjWHHlre5FSrpkp0LUBzacC/preview"
   },
   {
     "number": 7,
@@ -353,7 +371,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第7回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/12yGRWwAxdMueaHx7IJOmF5Rfa1qLjabb/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/12yGRWwAxdMueaHx7IJOmF5Rfa1qLjabb/preview"
   },
   {
     "number": 8,
@@ -402,7 +423,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第8回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1vDCIQJXl-_gGqc5k2JuE6DwZV0c31aRz/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1vDCIQJXl-_gGqc5k2JuE6DwZV0c31aRz/preview"
   },
   {
     "number": 9,
@@ -453,7 +477,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第9回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1uRT5PQALKBACbXTwZG_kkt8m63bPVDGT/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1uRT5PQALKBACbXTwZG_kkt8m63bPVDGT/preview"
   },
   {
     "number": 10,
@@ -502,7 +529,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第10回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1hLU9Pk-_pcEaZ9wUFG4ESY0yjZ0Y_FaA/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1hLU9Pk-_pcEaZ9wUFG4ESY0yjZ0Y_FaA/preview"
   },
   {
     "number": 11,
@@ -655,7 +685,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第13回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1-Xp07QhtmQQDAs47uu72cY05RwydzFWf/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1-Xp07QhtmQQDAs47uu72cY05RwydzFWf/preview"
   },
   {
     "number": 14,
@@ -706,7 +739,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第14回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1noLVYRxpTJrX5YGSeG3RNnp9MVygu_1D/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1noLVYRxpTJrX5YGSeG3RNnp9MVygu_1D/preview"
   },
   {
     "number": 15,
@@ -757,7 +793,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第15回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/16FGaT6KW-nwaEZh8q7TjIhDwmRMBaGig/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/16FGaT6KW-nwaEZh8q7TjIhDwmRMBaGig/preview"
   },
   {
     "number": 16,
@@ -808,7 +847,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第16回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1W5I0JutqTpgJCCNmGOd0nJC4BMIc-kRw/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1W5I0JutqTpgJCCNmGOd0nJC4BMIc-kRw/preview"
   },
   {
     "number": 17,
@@ -859,7 +901,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第17回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1y9DIDYNrO1Odgc2nmc8589bQkzHMeODE/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1y9DIDYNrO1Odgc2nmc8589bQkzHMeODE/preview"
   },
   {
     "number": 18,
@@ -910,7 +955,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第18回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1n_zF2FjfoQ_TbLWEeIl80rJMZzQwj33f/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1n_zF2FjfoQ_TbLWEeIl80rJMZzQwj33f/preview"
   },
   {
     "number": 19,
@@ -961,7 +1009,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第19回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1Ft2xkHNdSza09r0T3SjonGnuwZd7cb1C/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1Ft2xkHNdSza09r0T3SjonGnuwZd7cb1C/preview"
   },
   {
     "number": 20,
@@ -1012,7 +1063,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第20回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1UcajTHXQEgLhLN0EmsEh4Hfcdg0N99Kh/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1UcajTHXQEgLhLN0EmsEh4Hfcdg0N99Kh/preview"
   },
   {
     "number": 21,
@@ -1063,7 +1117,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第21回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1XXlORW2VIFDXO2ky3aS72-gCOvq8Ndtw/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1XXlORW2VIFDXO2ky3aS72-gCOvq8Ndtw/preview"
   },
   {
     "number": 22,
@@ -1114,7 +1171,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第22回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1h7Ac2M2zX73hz0Lif0B3wXlDYo2Ansx-/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1h7Ac2M2zX73hz0Lif0B3wXlDYo2Ansx-/preview"
   },
   {
     "number": 23,
@@ -1165,7 +1225,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第23回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1UCeGiTvt-6Pv4HO3mjzKAGMGZuhM76ZW/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1UCeGiTvt-6Pv4HO3mjzKAGMGZuhM76ZW/preview"
   },
   {
     "number": 24,
@@ -1216,7 +1279,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第24回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/11MjAqhfDLVWCGk_Tr8cbHKyNJEWD6iva/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/11MjAqhfDLVWCGk_Tr8cbHKyNJEWD6iva/preview"
   },
   {
     "number": 25,
@@ -1267,7 +1333,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第25回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1DVvnxddeHLHj5AN3jaBUenHx5EpinmR6/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1DVvnxddeHLHj5AN3jaBUenHx5EpinmR6/preview"
   },
   {
     "number": 26,
@@ -1318,7 +1387,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第26回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/16RvxuPTj_VIP39GncYD_H0JeNP-Z8NGc/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/16RvxuPTj_VIP39GncYD_H0JeNP-Z8NGc/preview"
   },
   {
     "number": 27,
@@ -1369,7 +1441,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第27回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/19D9ARrVK8UaxQDV7zyTA_Lw4YU5u5td_/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/19D9ARrVK8UaxQDV7zyTA_Lw4YU5u5td_/preview"
   },
   {
     "number": 28,
@@ -1420,7 +1495,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第28回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/18ef4KZJJhrVidKca3ulYdoSy2Y07aW89/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/18ef4KZJJhrVidKca3ulYdoSy2Y07aW89/preview"
   },
   {
     "number": 29,
@@ -1471,7 +1549,10 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第29回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/14Krr8poWXz5CkNrDy5leDjjGyazyNtWV/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/14Krr8poWXz5CkNrDy5leDjjGyazyNtWV/preview"
   },
   {
     "number": 30,
@@ -1522,6 +1603,9 @@ const ayanoSessions = [
       }
     ],
     "workNote": "正解はないので感じたことを素直に書くことが大切です！\n書けない質問があったり無理に全部埋めなくても大丈夫なので\n分かる範囲・書ける範囲で書くようにしてください！",
-    "previouslyCompleted": true
+    "previouslyCompleted": true,
+    "videoTitle": "第30回 動画講義",
+    "videoUrl": "https://drive.google.com/file/d/1D-D2HzUUnqHk_h07DCa5fzd7jWqiOStN/view?usp=drive_link",
+    "videoEmbedUrl": "https://drive.google.com/file/d/1D-D2HzUUnqHk_h07DCa5fzd7jWqiOStN/preview"
   }
 ];
