@@ -24,7 +24,7 @@ assert.equal(context.location.href,'index.html');
 assert.equal(run('lessons.length'),0);
 assert.equal(run('ayanoSessions.length'),30);
 assert.equal(run('ayanoSessions.reduce((n,s)=>n+s.workQuestions.length,0)'),300);
-assert.equal(run('ayanoSessions.every(s=>s.previouslyCompleted && s.workQuestions.every(q=>!q.examples))'),true);
+assert.equal(run('ayanoSessions.every(s=>s.previouslyCompleted===(s.number<=27) && s.workQuestions.every(q=>!q.examples))'),true);
 context.localStorage.setItem('work-1-work',JSON.stringify({'0':'legacy Misaki answer'}));
 elements['#member-id'].value='002';elements['#password'].value='ayano';
 run('login()');
@@ -32,7 +32,8 @@ assert.equal(context.location.href,'dashboard.html');
 assert.equal(context.sessionStorage.getItem('member-account').includes('password'),false);
 listeners.DOMContentLoaded();
 assert.equal(run('lessons.length'),58);
-assert.equal(run('lessons.filter(l=>l.type==="work").every(l=>lessonDone(l))'),true);
+assert.equal(run('lessons.filter(l=>lessonDone(l)).length'),52);
+assert.equal(run('lessons.filter(l=>["28-video","29-video","30-video"].includes(l.id)).every(l=>!lessonDone(l))'),true);
 assert.equal(run('lessons.filter(l=>l.type==="video").length'),28);
 assert.equal(run('lessons.some(l=>["11-video","12-video"].includes(l.id))'),false);
 run('openLesson("1-video")');
@@ -53,7 +54,7 @@ for(const id of ['#dashboard-root','#greeting','#member-pill','#today','#hero-me
 }
 run('renderDashboard();renderAdmin(1)');
 assert.equal(elements['#greeting'].textContent,'あやのさん、こんにちは');
-assert.equal(elements['#home-count'].textContent,'30 / 58 完了');
+assert.equal(elements['#home-count'].textContent,'52 / 58 完了');
 assert.equal(elements['#admin-member-count'].textContent,'2名');
 assert.equal(elements['#admin-course-count'].textContent,'33回');
 assert.equal(elements['#detail-name'].textContent,'あやの');

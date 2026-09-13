@@ -70,7 +70,7 @@ function getAnswers(id,memberId=currentMember()?.id){
 function hasAnswers(id,memberId=currentMember()?.id){return Object.values(getAnswers(id,memberId)).some(value=>typeof value==='string' && value.trim())}
 function buildLessons(memberId){
   return (courseByMember[memberId] || []).flatMap(session=>[
-    ...(session.videoUrl?[{id:`${session.number}-video`,round:`第${session.number}回`,title:session.videoTitle,type:'video',url:session.videoUrl,embedUrl:session.videoEmbedUrl}]:[]),
+    ...(session.videoUrl?[{id:`${session.number}-video`,round:`第${session.number}回`,title:session.videoTitle,type:'video',url:session.videoUrl,embedUrl:session.videoEmbedUrl,previouslyCompleted:!!session.videoPreviouslyCompleted}]:[]),
     {id:`${session.number}-work`,round:`第${session.number}回`,title:session.workTitle,type:'work',questions:session.workQuestions,description:session.workDescription,note:session.workNote,previouslyCompleted:!!session.previouslyCompleted}
   ]);
 }
