@@ -1640,6 +1640,9 @@ const ayanoSessions = [
   },
   {
     "number": 31,
+    "videoTitle": "「モヤっとを受け入れに変える」自分のプロセスを作る",
+    "videoUrl": "https://youtu.be/Gn0R9u4iMNs",
+    "videoEmbedUrl": "https://www.youtube.com/embed/Gn0R9u4iMNs",
     "workTitle": "「モヤっとを受け入れに変える」自分のプロセスを作る",
     "workDescription": [
       "今回の体験を言語化して、再現できるものにする",

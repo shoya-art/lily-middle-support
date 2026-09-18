@@ -46,6 +46,9 @@ const misakiSessions=[{
   ]
 },{
   number:4,
+  videoTitle:'復縁の近道は、マイナスを作らないこと',
+  videoUrl:'https://youtu.be/_EBo2OE83jY',
+  videoEmbedUrl:'https://www.youtube.com/embed/_EBo2OE83jY',
   workTitle:'自分の「マイナスを作りやすい癖」を整理する',
   workDescription:['これまでの回で扱った内容を、「マイナスを作らない」という視点で整理する','彼の嬉しい報告に、シンプルに返す練習をする','自分が特に気をつけたい癖を、優先順位をつけて絞り込む'],
   workQuestions:[
@@ -176,7 +179,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第31回のワークと28本の動画講義（第11・12・31回はワークのみ）':'第1回〜第4回のワークと3本の動画講義（第4回はワークのみ）';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第31回のワークと29本の動画講義（第11・12回はワークのみ）':'第1回〜第4回の動画講義・ワーク';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;

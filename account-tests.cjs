@@ -36,10 +36,12 @@ run('login()');
 assert.equal(context.location.href,'dashboard.html');
 assert.equal(context.sessionStorage.getItem('member-account').includes('password'),false);
 listeners.DOMContentLoaded();
-assert.equal(run('lessons.length'),59);
+assert.equal(run('lessons.length'),60);
 assert.equal(run('lessons.filter(l=>lessonDone(l)).length'),52);
 assert.equal(run('lessons.filter(l=>["28-video","29-video","30-video"].includes(l.id)).every(l=>!lessonDone(l))'),true);
-assert.equal(run('lessons.filter(l=>l.type==="video").length'),28);
+assert.equal(run('lessons.filter(l=>l.type==="video").length'),29);
+assert.equal(run('lessons.find(l=>l.id==="31-video").url'),'https://youtu.be/Gn0R9u4iMNs');
+assert.equal(run('lessons.find(l=>l.id==="31-video").embedUrl'),'https://www.youtube.com/embed/Gn0R9u4iMNs');
 assert.equal(run('lessons.some(l=>["11-video","12-video"].includes(l.id))'),false);
 run('openLesson("1-video")');
 assert.ok(elements['#modal-content'].innerHTML.includes('1wjVgDKMuUmX0sTNptIytEPmt3JPWvq4K/preview'));
@@ -59,14 +61,17 @@ for(const id of ['#dashboard-root','#greeting','#member-pill','#today','#hero-me
 }
 run('renderDashboard();renderAdmin(1)');
 assert.equal(elements['#greeting'].textContent,'あやのさん、こんにちは');
-assert.equal(elements['#home-count'].textContent,'52 / 59 完了');
+assert.equal(elements['#home-count'].textContent,'52 / 60 完了');
 assert.equal(elements['#admin-member-count'].textContent,'2名');
 assert.equal(elements['#admin-course-count'].textContent,'35回');
 assert.equal(elements['#detail-name'].textContent,'あやの');
 assert.equal(context.localStorage.getItem('member-001:work-1-work'),null);
 elements['#member-id'].value='001';elements['#password'].value='misaki';
 run('login()');listeners.DOMContentLoaded();
-assert.equal(run('lessons.length'),7);
+assert.equal(run('lessons.length'),8);
+assert.equal(run('lessons.find(l=>l.id==="4-video").title'),'復縁の近道は、マイナスを作らないこと');
+assert.equal(run('lessons.find(l=>l.id==="4-video").url'),'https://youtu.be/_EBo2OE83jY');
+assert.equal(run('lessons.find(l=>l.id==="4-video").embedUrl'),'https://www.youtube.com/embed/_EBo2OE83jY');
 assert.equal(run('getAnswers("1-work")["0"]'),'legacy Misaki answer');
 assert.ok(context.localStorage.getItem('work-1-work'));
 fields=[
@@ -91,4 +96,4 @@ assert.ok(!elements['#modal-content'].innerHTML.includes('マイナスを作り�
 run('logout()');
 assert.equal(context.sessionStorage.getItem('member-account'),null);
 assert.equal(run('currentMember()'),null);
-console.log('PASS: separate Misaki round 4 and Ayano round 31, 312 Ayano questions, checklist saving, account separation, legacy preservation, answer review, editing, choice fields, logout and login gate');
+console.log('PASS: separate Misaki round 4 and Ayano round 31 videos and works, 312 Ayano questions, checklist saving, account separation, legacy preservation, answer review, editing, choice fields, logout and login gate');
