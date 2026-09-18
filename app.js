@@ -44,6 +44,19 @@ const misakiSessions=[{
     {question:'それでも、もし本当に気になって仕方がない時は、どれくらい時間を置いてから、どんな聞き方で確認したいですか？',fields:['時間の目安','確認する時の聞き方']},
     {question:'今、予定として変更しそうなこと、まだ彼に伝えていないことがあれば、書き出してみてください。それをまとめて伝えるとしたら、どんな1つのメッセージにできますか？',fields:['変更しそうな予定','まとめて伝えるメッセージ案']}
   ]
+},{
+  number:4,
+  workTitle:'自分の「マイナスを作りやすい癖」を整理する',
+  workDescription:['これまでの回で扱った内容を、「マイナスを作らない」という視点で整理する','彼の嬉しい報告に、シンプルに返す練習をする','自分が特に気をつけたい癖を、優先順位をつけて絞り込む'],
+  workQuestions:[
+    {question:'彼から「仕事決まったよ」と報告があったとして、今のミサキさんなら、最初にどう返しますか？',label:'ミサキさんの返信'},
+    {question:'質問1の返信に、将来の話や関係についての話が含まれていたら、それを外して、「おめでとう」「良かったね」だけのシンプルな形に書き直してみてください。',label:'シンプルに書き直すと'},
+    {question:'これまでの回（第1回〜第5回）で出てきた「マイナスを作らないための行動」を、思い出せる範囲で書き出してみてください。',label:'思い出した行動'},
+    {question:'質問3の中で、自分が一番できていると感じるものはどれですか？',label:'できていること'},
+    {question:'質問3の中で、自分が一番まだ難しいと感じるものはどれですか？',label:'まだ難しいこと'},
+    {question:'質問5で選んだものについて、次に同じ場面が来たら、具体的にどう対応してみたいですか？',label:'ミサキさんの対応'},
+    {question:'これから1週間、「マイナスを作らない」ために、これだけは意識する、というものをひとつ決めてください。',label:'この1週間で意識すること'}
+  ]
 }];
 
 const memberAccounts = [
@@ -118,7 +131,7 @@ function openLesson(id){
   }else{
     const saved=getAnswers(id);
     const field=(key,label,placeholder='ここに回答を入力してください')=>`<label>${escapeHtml(label)}</label><textarea data-question="${key}" placeholder="${escapeHtml(placeholder)}">${escapeHtml(saved[key] || '')}</textarea>`;
-    content.innerHTML=`<p class="work-intro">${lesson.round}の内容を振り返りながら、順番に答えてみましょう。</p>${lesson.previouslyCompleted?'<div class="work-note">このワークは過去に取り組み済みです。再提出は不要です。過去の回答は移行していないため、必要に応じてあらためて記入・保存できます。</div>':''}${lesson.description?`<div class="work-goals"><strong>このワークでやりたいこと</strong><ul>${lesson.description.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}${lesson.questions.map((question,index)=>`<section class="work-question"><h3>質問${index+1}</h3><p>${escapeHtml(question.question)}</p>${question.examples?`<div class="work-examples"><small>例えばこんな感じです</small><ul>${question.examples.map(example=>`<li>${escapeHtml(example)}</li>`).join('')}</ul></div>`:''}${question.type==='choice'?`<div class="choice-list">${question.choices.map(choice=>`<label><input type="radio" name="question-${index}" data-question="${index}" value="${escapeHtml(choice)}" ${saved[index]===choice?'checked':''}> ${escapeHtml(choice)}</label>`).join('')}</div>`:question.fields?question.fields.map((label,fieldIndex)=>field(`${index}-${fieldIndex}`,label)).join(''):field(index,question.label,question.placeholder)}</section>`).join('')}${lesson.note?`<div class="work-note">${escapeHtml(lesson.note)}</div>`:''}<button class="wide-btn" onclick="saveWork('${id}')">回答を保存する</button><a class="video-link" href="answers.html">保存した回答を振り返る →</a>`;
+    content.innerHTML=`<p class="work-intro">${lesson.round}の内容を振り返りながら、順番に答えてみましょう。</p>${lesson.previouslyCompleted?'<div class="work-note">このワークは過去に取り組み済みです。再提出は不要です。過去の回答は移行していないため、必要に応じてあらためて記入・保存できます。</div>':''}${lesson.description?`<div class="work-goals"><strong>このワークでやりたいこと</strong><ul>${lesson.description.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}${lesson.questions.map((question,index)=>`<section class="work-question"><h3>質問${index+1}</h3><p>${escapeHtml(question.question)}</p>${question.examples?`<div class="work-examples"><small>例えばこんな感じです</small><ul>${question.examples.map(example=>`<li>${escapeHtml(example)}</li>`).join('')}</ul></div>`:''}${question.type==='checklist'?`<div class="choice-list checklist-list">${question.choices.map((choice,choiceIndex)=>`<label><input type="checkbox" data-question="${index}-${choiceIndex}" value="${escapeHtml(choice)}" ${saved[`${index}-${choiceIndex}`]==='checked'?'checked':''}> ${escapeHtml(choice)}</label>`).join('')}</div>`:question.type==='choice'?`<div class="choice-list">${question.choices.map(choice=>`<label><input type="radio" name="question-${index}" data-question="${index}" value="${escapeHtml(choice)}" ${saved[index]===choice?'checked':''}> ${escapeHtml(choice)}</label>`).join('')}</div>`:question.fields?question.fields.map((label,fieldIndex)=>field(`${index}-${fieldIndex}`,label)).join(''):field(index,question.label,question.placeholder)}</section>`).join('')}${lesson.note?`<div class="work-note">${escapeHtml(lesson.note)}</div>`:''}<button class="wide-btn" onclick="saveWork('${id}')">回答を保存する</button><a class="video-link" href="answers.html">保存した回答を振り返る →</a>`;
   }
   document.querySelector('#lesson-modal').classList.add('open');
 }
@@ -131,7 +144,8 @@ function saveWork(id){
   if(!currentMember() || !lessons.some(item=>item.id===id && item.type==='work'))return;
   const answers={};
   document.querySelectorAll('#modal-content [data-question]').forEach(field=>{
-    if(field.type!=='radio' || field.checked)answers[field.dataset.question]=field.value;
+    if(field.type==='checkbox')answers[field.dataset.question]=field.checked?'checked':'';
+    else if(field.type!=='radio' || field.checked)answers[field.dataset.question]=field.value;
   });
   const button=document.querySelector('#modal-content .wide-btn');
   try{
@@ -143,7 +157,7 @@ function renderAnswers(){
   const root=document.querySelector('#answers-root');if(!root)return;
   root.innerHTML=lessons.filter(item=>item.type==='work').map(work=>{
     const saved=getAnswers(work.id),savedAny=hasAnswers(work.id);
-    const answers=work.questions.flatMap((question,index)=>question.fields?question.fields.map((label,fieldIndex)=>({question:`質問${index+1}：${question.question}`,label,value:saved[`${index}-${fieldIndex}`]})):[{question:`質問${index+1}：${question.question}`,label:question.label || '選んだ回答',value:saved[index]}]);
+    const answers=work.questions.flatMap((question,index)=>question.type==='checklist'?question.choices.map((choice,choiceIndex)=>({question:`質問${index+1}：${question.question}`,label:choice,value:saved[`${index}-${choiceIndex}`]==='checked'?'できた':''})):question.fields?question.fields.map((label,fieldIndex)=>({question:`質問${index+1}：${question.question}`,label,value:saved[`${index}-${fieldIndex}`]})):[{question:`質問${index+1}：${question.question}`,label:question.label || '選んだ回答',value:saved[index]}]);
     const status=savedAny?'保存済み':work.previouslyCompleted?'過去に取り組み済み':'未回答';
     return `<section class="answer-card"><div class="answer-head"><div><span>${work.round}</span><h2>${escapeHtml(work.title)}</h2></div><span class="answer-status ${savedAny || work.previouslyCompleted?'saved':'empty'}">${status}</span></div>${savedAny?`<div class="answer-list">${answers.filter(answer=>String(answer.value || '').trim()).map(answer=>`<div class="answer-item"><small>${escapeHtml(answer.question)}</small><b>${escapeHtml(answer.label)}</b><p>${escapeHtml(answer.value).replace(/\n/g,'<br>')}</p></div>`).join('')}</div>`:`<p class="answer-empty">${work.previouslyCompleted?'過去の回答は移行していません。このサイトで保存した回答は、ここに表示されます。':'このワークには、まだ保存された回答がありません。'}</p>`}<a class="answer-edit" href="lectures.html?work=${work.id}">${savedAny?'回答を確認・編集する':work.previouslyCompleted?'ワークを確認・再記入する':'ワークに回答する'} →</a></section>`;
   }).join('');
@@ -162,7 +176,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第30回のワークと28本の動画講義（第11・12回はワークのみ）':'第1回〜第3回の動画講義・ワーク';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第31回のワークと28本の動画講義（第11・12・31回はワークのみ）':'第1回〜第4回のワークと3本の動画講義（第4回はワークのみ）';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;
