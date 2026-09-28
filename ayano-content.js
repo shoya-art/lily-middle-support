@@ -1714,6 +1714,9 @@ const ayanoSessions = [
   },
   {
     "number": 32,
+    "videoTitle": "長く続くカップルが自然にやっている「小さな習慣」10選",
+    "videoUrl": "https://youtu.be/sm8ERNBv2J4",
+    "videoEmbedUrl": "https://www.youtube.com/embed/sm8ERNBv2J4",
     "workTitle": "「小さな習慣」を自分の日常に取り入れる",
     "workDescription": [
       "10の習慣を自分ごととして整理する",

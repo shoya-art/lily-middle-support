@@ -62,6 +62,9 @@ const misakiSessions=[{
   ]
 },{
   number:5,
+  videoTitle:'デートが上手くいった後こそ、彼との連絡ルールを守る',
+  videoUrl:'https://youtu.be/FwNkMHqgUbU',
+  videoEmbedUrl:'https://www.youtube.com/embed/FwNkMHqgUbU',
   workTitle:'デート後の連絡ルールを、自分のものにする',
   workDescription:['27日のデートを、事実だけで振り返る','彼のペースに合わせた連絡の目安を、数字で決める','気持ちメモを、実際に1回書いてみる'],
   workQuestions:[
@@ -192,7 +195,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第32回のワークと29本の動画講義（第11・12・32回はワークのみ）':'第1回〜第5回のワークと4本の動画講義（第5回はワークのみ）';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第32回のワークと30本の動画講義（第11・12回はワークのみ）':'第1回〜第5回の動画講義・ワーク';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;
