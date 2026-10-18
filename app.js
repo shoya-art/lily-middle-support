@@ -76,6 +76,19 @@ const misakiSessions=[{
     {question:'今の気持ちを、「気持ちメモ」に書いてみてください。',fields:['日付と、きっかけになった事実','今の気持ち','彼に送りたい文','24時間後の私は、これを送りたい？（翌日に書く）']},
     {question:'これから、不安になりやすい場面を3つ挙げて、それぞれ「その時にやること」を決めておきましょう。やることは、第3回で作った「自分を落ち着かせる方法」のリストから選んでください。',examples:['彼のSNSの投稿を見て不安になった → 温かい飲み物を淹れる','彼の返信が遅い → 5分だけ外を歩く'],fields:['場面①','その時にやること①','場面②','その時にやること②','場面③','その時にやること③']}
   ]
+},{
+  number:6,
+  workTitle:'SNSを見て不安になった時の、私の手順をつくる',
+  workDescription:['彼のSNSを見て不安になった場面を、事実だけで振り返る','不安になった時の「5ステップ」を、自分用に書く','SNSを見る回数と時間のルールを、決める'],
+  workQuestions:[
+    {question:'最近、彼のSNSを見て不安になった場面を、1つ思い出してください。その時、彼のSNSに載っていた「事実」だけを書きます。',examples:['彼が「彼女募集中」と投稿していた。それだけ。'],label:'ミサキさんの場面と事実'},
+    {question:'その時の不安は、10点満点で何点でしたか？そして、その後に、彼に対して実際にした行動を書いてください。',fields:['不安度（○ / 10点）','実際にした行動']},
+    {question:'質問1の事実に対して、考えられる理由を3つ書いてください。「彼が本当に出会いを探している」以外の理由も、2つ以上入れてみます。',examples:['気分転換で、なんとなく投稿した','深く考えずに、流れで書いた'],fields:['考えられる理由①','考えられる理由②','考えられる理由③']},
+    {question:'「不安になった時の5ステップ」を、ミサキさんの言葉で書き直してください。書いたら、スマホのメモに保存して、すぐ見られる場所に置きます。',fields:['ステップ①','ステップ②','ステップ③','ステップ④','ステップ⑤']},
+    {question:'彼のSNSを見る回数と時間のルールを、決めてください。',fields:['1日に見る回数','見る時間帯①','見る時間帯②','1回に見る時間（○分まで）']},
+    {question:'SNSを見に行く回数を減らすための工夫を、1つ選んで、今日やってみてください。',examples:['SNSアプリを、ホーム画面の1ページ目から外す','通知をオフにする'],fields:['やること','やってみて、どうでしたか？']},
+    {question:'不安になりやすい時間帯（夜、ひとりの時間など）に、ステップ③でやることを3つ決めてください。第3回のリストから選んで構いません。',fields:['ミサキさんのやること①','ミサキさんのやること②','ミサキさんのやること③']}
+  ]
 }];
 
 const memberAccounts = [
@@ -195,7 +208,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第32回のワークと30本の動画講義（第11・12回はワークのみ）':'第1回〜第5回の動画講義・ワーク';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第32回のワークと30本の動画講義（第11・12回はワークのみ）':'第1回〜第6回のワークと5本の動画講義（第6回はワークのみ）';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;
