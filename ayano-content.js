@@ -1758,6 +1758,9 @@ const ayanoSessions = [
   },
   {
     "number": 33,
+    "videoTitle": "「2人のドキドキ設計図」を作る",
+    "videoUrl": "https://youtu.be/1--0jkMUVxI",
+    "videoEmbedUrl": "https://www.youtube.com/embed/1--0jkMUVxI",
     "workTitle": "「2人のドキドキ設計図」を作る",
     "workDescription": [
       "彼のドキドキのスイッチを言語化する",

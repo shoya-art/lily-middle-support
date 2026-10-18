@@ -78,6 +78,9 @@ const misakiSessions=[{
   ]
 },{
   number:6,
+  videoTitle:'SNSを見て不安になった時の、私の手順をつくる',
+  videoUrl:'https://youtu.be/dBXXNpMg-XA',
+  videoEmbedUrl:'https://www.youtube.com/embed/dBXXNpMg-XA',
   workTitle:'SNSを見て不安になった時の、私の手順をつくる',
   workDescription:['彼のSNSを見て不安になった場面を、事実だけで振り返る','不安になった時の「5ステップ」を、自分用に書く','SNSを見る回数と時間のルールを、決める'],
   workQuestions:[
@@ -208,7 +211,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第33回のワークと30本の動画講義（第11・12・33回はワークのみ）':'第1回〜第6回のワークと5本の動画講義（第6回はワークのみ）';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第33回のワークと31本の動画講義（第11・12回はワークのみ）':'第1回〜第6回の動画講義・ワーク';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;
