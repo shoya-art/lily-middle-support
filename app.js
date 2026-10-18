@@ -208,7 +208,7 @@ function renderDashboard(){
   document.querySelector('#home-count').textContent=`${done} / ${lessons.length} 完了`;
   document.querySelector('#home-percent').textContent=`${percent}%`;
   document.querySelector('#home-fill').style.width=`${percent}%`;
-  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第32回のワークと30本の動画講義（第11・12回はワークのみ）':'第1回〜第6回のワークと5本の動画講義（第6回はワークのみ）';
+  document.querySelector('#course-description').textContent=member.id==='002'?'第1回〜第33回のワークと30本の動画講義（第11・12・33回はワークのみ）':'第1回〜第6回のワークと5本の動画講義（第6回はワークのみ）';
 }
 function renderAdmin(selected=0){
   const list=document.querySelector('#member-list');if(!list)return;
