@@ -132,9 +132,21 @@ function migrateMisakiAnswers(){
     if(legacy && !localStorage.getItem(target))localStorage.setItem(target,legacy);
   });
 }
-function login(){
+let archiveLoginBusy=false;
+async function login(){
+  if(archiveLoginBusy)return;
   const id=document.querySelector('#member-id').value.trim(),pw=document.querySelector('#password').value;
   const error=document.querySelector('#login-error');
+  if(id==='003'){
+    if(typeof MemberArchive==='undefined'){error.textContent='ページを再読み込みしてお試しください';return}
+    error.textContent='記録を開いています…';
+    archiveLoginBusy=true;
+    try{if(await MemberArchive.login(id,pw)){document.querySelector('#password').value='';location.href='archive.html'}}
+    catch(failure){error.textContent=failure.message || 'ログインできませんでした。もう一度お試しください'}
+    finally{archiveLoginBusy=false}
+    return;
+  }
+  if(typeof MemberArchive!=='undefined')MemberArchive.lock();
   if(id==='000' && pw==='ziro'){
     sessionStorage.setItem('demo-role','admin');sessionStorage.removeItem('member-account');location.href='admin.html';return;
   }
@@ -144,7 +156,7 @@ function login(){
   sessionStorage.setItem('member-account',JSON.stringify({id:member.id,name:member.name}));
   migrateMisakiAnswers();location.href='dashboard.html';
 }
-function logout(){sessionStorage.removeItem('demo-role');sessionStorage.removeItem('member-account');location.href='index.html'}
+function logout(){if(typeof MemberArchive!=='undefined')MemberArchive.lock();sessionStorage.removeItem('demo-role');sessionStorage.removeItem('member-account');location.href='index.html'}
 function lessonDone(lesson,memberId=currentMember()?.id){
   return lesson.previouslyCompleted || (lesson.type==='work'?hasAnswers(lesson.id,memberId):localStorage.getItem(`member-${memberId}:done-${lesson.id}`)==='true');
 }

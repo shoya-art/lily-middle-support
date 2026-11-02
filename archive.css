@@ -1,0 +1,30 @@
+.archive-shell{max-width:760px}
+.archive-shell .hero-card h1{font-size:24px}
+.archive-shell .stat-card small{color:#756b6b;font-size:12px}
+.archive-shell .small-btn.ghost,.site-header #archive-logout{color:#6b6161}
+.archive-video-note h2,.archive-filter h2{font-size:17px;margin:0 0 10px}
+.archive-video-note p,.archive-help{font-size:13px;line-height:1.9;color:#756b6b}
+.archive-filter{margin:30px 0 20px;scroll-margin-top:90px}
+.archive-filter label{display:block;font-size:13px;margin:16px 0 7px}
+.archive-filter select{font:inherit;max-width:100%;width:100%;padding:13px;border:1px solid var(--line);border-radius:13px;background:white;color:var(--ink)}
+.archive-filter a{color:var(--coral-dark);font-size:13px}
+.archive-round{scroll-margin-top:85px}
+.archive-round[hidden]{display:none}
+.archive-work summary,.archive-note summary{cursor:pointer;display:flex;align-items:center;gap:12px;list-style:none;min-height:64px}
+.archive-work summary::-webkit-details-marker,.archive-note summary::-webkit-details-marker{display:none}
+.archive-work summary:after,.archive-note summary:after{content:'＋';margin-left:auto;color:var(--coral);font-size:22px;flex-shrink:0}
+.archive-work[open]>summary:after,.archive-note[open]>summary:after{content:'−'}
+.archive-work summary:focus-visible,.archive-note summary:focus-visible{outline:2px solid var(--coral);outline-offset:6px;border-radius:8px}
+.archive-work summary strong{display:block;font-size:17px;line-height:1.7}
+.archive-work summary small{display:block;color:#756b6b;font-size:12px;margin-top:6px}
+.archive-work .work-question>p{white-space:pre-wrap;font-size:14px}
+.archive-answer{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95;font-size:14px;background:var(--pink);padding:16px;border-radius:14px;margin:0}
+.archive-empty{color:#817777;font-size:13px;line-height:1.8}
+.archive-work .work-goals{font-size:13px;line-height:1.9;margin-top:18px}
+.archive-work .work-question h3{font-size:12px}
+.archive-readonly{color:#817777;font-size:12px;line-height:1.8;margin:20px 0}
+.archive-note summary{font-weight:700;font-size:14px;min-height:40px}
+.archive-note p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.95}
+.archive-footer{color:#817777;font-size:12px;line-height:1.8;padding:20px 0}
+.archive-shell [hidden]{display:none}
+@media(max-width:480px){.archive-shell .hero-card h1{font-size:20px}.archive-work summary strong{font-size:15px}.archive-shell .stat-card strong{font-size:24px}.archive-shell .stat-card small{font-size:10px}}
