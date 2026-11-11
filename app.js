@@ -141,7 +141,7 @@ async function login(){
     if(typeof MemberArchive==='undefined'){error.textContent='ページを再読み込みしてお試しください';return}
     error.textContent='記録を開いています…';
     archiveLoginBusy=true;
-    try{if(await MemberArchive.login(id,pw)){document.querySelector('#password').value='';location.href='archive.html'}}
+    try{if(await MemberArchive.login(id,pw)){document.querySelector('#password').value='';location.href='archive.html?v=20261111'}}
     catch(failure){error.textContent=failure.message || 'ログインできませんでした。もう一度お試しください'}
     finally{archiveLoginBusy=false}
     return;
