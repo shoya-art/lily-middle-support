@@ -1,0 +1,17 @@
+{
+  "name": "lily-middle-work-api",
+  "main": "worker.mjs",
+  "account_id": "4b33b521bb894b9e4e83a0e2a6cc962a",
+  "compatibility_date": "2026-05-22",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "vars": {
+    "ALLOWED_ORIGIN": "https://shoya-art.github.io",
+    "MEMBER_ID": "003",
+    "FIRST_ROUND": "30",
+    "LAST_ROUND": "32",
+    "KEY_ID": "sync-003-v1"
+  },
+  "d1_databases": [{"binding":"DB","database_name":"lily-middle-works","database_id":"97281c6e-633b-4ea1-b6c3-6dc500cef9c5"}]
+}

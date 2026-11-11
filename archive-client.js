@@ -3,7 +3,7 @@
   const sessionKey = 're-relation:archive-session';
   const id = '003';
   let pending = false;
-  const lock = () => sessionStorage.removeItem(sessionKey);
+  const lock = () => {sessionStorage.removeItem(sessionKey);if(root.MemberWorkSync)root.MemberWorkSync.lock();};
   async function envelope() {
     if (!root.crypto?.subtle) throw new Error('安全な接続（HTTPS）と新しいブラウザで開いてください。');
     const response = await fetch('archives/003.json', {cache:'no-store', credentials:'omit'});
@@ -22,6 +22,7 @@
       let data;
       try { data = await MemberArchiveCrypto.decrypt(encrypted, key, id); }
       catch { throw new Error('IDまたはパスワードが正しくありません。'); }
+      if(root.MemberWorkSync)await root.MemberWorkSync.login(password);
       // Only a derived key, never plaintext answers/password, survives page navigation.
       sessionStorage.setItem(sessionKey, JSON.stringify({memberId:id, key:await MemberArchiveCrypto.exportKey(key), expiresAt:Date.now()+8*60*60*1000}));
       sessionStorage.setItem('demo-role', 'archive');
@@ -42,6 +43,7 @@
     } catch {lock();return null;}
   }
   function logout() {
+    if(root.MemberWorkSync)root.MemberWorkSync.logout();
     lock();
     sessionStorage.removeItem('demo-role');
     sessionStorage.removeItem('member-account');

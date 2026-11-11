@@ -36,6 +36,8 @@ yarn-error.log*
 
 /dist/
 /.wrangler/
+/backend/.wrangler/
+/backend/.dev.vars
 /outputs/
 /work/
 /.npm-cache/
